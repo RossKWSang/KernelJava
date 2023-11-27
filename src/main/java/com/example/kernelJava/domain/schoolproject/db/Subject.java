@@ -1,20 +1,20 @@
 package com.example.kernelJava.domain.schoolproject.db;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.util.List;
+
 @Getter
-@Builder
 @Entity
 public class Subject {
     @Id
     private Long id;
     private String name;
-    private Integer gradeType;
-
-    public Subject() {
-    }
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
+    private List<Score> scores;
+    @ManyToOne
+    private School school;
 }
 

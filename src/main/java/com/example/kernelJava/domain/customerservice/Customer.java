@@ -1,4 +1,4 @@
-package com.example.kernelJava.domain.customerService;
+package com.example.kernelJava.domain.customerservice;
 
 public class Customer {
 

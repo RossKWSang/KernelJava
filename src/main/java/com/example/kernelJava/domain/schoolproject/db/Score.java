@@ -6,22 +6,13 @@ import lombok.Getter;
 
 @Getter
 @Entity
-@Builder
 public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Student student;
-
-    @ManyToOne
-    @JoinColumn
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Subject subject;
-
     private Integer subjectMark;
-
-    public Score() {
-    }
 }

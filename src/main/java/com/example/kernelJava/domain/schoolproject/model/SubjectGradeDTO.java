@@ -1,4 +1,4 @@
-package com.example.kernelJava.domain.schoolproject.business.model;
+package com.example.kernelJava.domain.schoolproject.model;
 
 import lombok.Builder;
 import lombok.Getter;
