@@ -1,0 +1,8 @@
+
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§ŠÎ	8†Ç÷ˆÁ1
+N
+java:S3599",Use another way to initialize this instance.(Þ°çÍÿÿÿÿÿ8‡Ç÷ˆÁ1
+{
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8ˆÇ÷ˆÁ1
+P
+java:S1068".Remove this unused "scoreStore" private field.(Þ°çÍÿÿÿÿÿ8‰Ç÷ˆÁ1

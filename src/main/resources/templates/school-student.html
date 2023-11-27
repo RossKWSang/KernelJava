@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="studentSelect">Select an option:</label>
+    <select id="studentSelect">
+        <option value="김영롱">김영롱</option>
+        <option value="우무룡">우무룡</option>
+        <option value="정지용">정지용</option>
+        <option value="이윤선">이윤선</option>
+        <option value="김현지">김현지</option>
+    </select>
+
+    <!-- 버튼을 클릭하면 선택된 값을 사용하여 새로운 페이지로 이동 -->
+    <button onclick="redirectToNewPage()">학생별 학점 보기</button>
+
+    <div th:if="${student != null}">
+        <p><strong>Student Name:</strong> <span th:text="${student.name}"></span></p>
+        <p><strong>Student ID:</strong> <span th:text="${student.id}"></span></p>
+    </div>
+
+    <script>
+        function redirectToNewPage() {
+            let selectedValue = document.getElementById('studentSelect').value;
+            window.location.href = '/school?student=' + encodeURIComponent(selectedValue);
+        }
+    </script>
+
+    <label for="subjectSelect">Select an option:</label>
+    <select id="subjectSelect">
+        <option value="국어">국어</option>
+        <option value="수학">수학</option>
+        <option value="댄스">댄스</option>
+    </select>
+
+    <!-- 버튼을 클릭하면 선택된 값을 사용하여 새로운 페이지로 이동 -->
+    <button onclick="redirectToNewPageBySubject()">학생별 학점 보기</button>
+
+    <div th:if="${student != null}">
+        <p><strong>Student Name:</strong> <span th:text="${student.name}"></span></p>
+        <p><strong>Student ID:</strong> <span th:text="${student.id}"></span></p>
+    </div>
+
+    <script>
+        function redirectToNewPageBySubject() {
+            let selectedValue = document.getElementById('subjectSelect').value;
+            window.location.href = '/school?subject=' + encodeURIComponent(selectedValue);
+        }
+    </script>
+</body>
+</html>
