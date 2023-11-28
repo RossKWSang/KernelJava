@@ -2,11 +2,14 @@ package com.example.kernelJava.domain.customerservice.algorithm.strategy;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.PriorityQueue;
 
 @Slf4j
 public class SjfStrategy implements ScheduleStrategy{
+
     @Override
     public int getDuration(List<List<Integer>> integerList) {
         int waitingTime;
